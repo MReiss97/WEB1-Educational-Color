@@ -1,0 +1,1259 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 40px;
+  font-family: "Montserrat";
+  scroll-behavior: smooth;
+  color: white;
+}
+@import url("//fonts.googleapis.com/css?family=Pacifico&text=Pure");
+@import url("//fonts.googleapis.com/css?family=Roboto:700&text=css");
+@import url("//fonts.googleapis.com/css?family=Kaushan+Script&text=!");
+
+body {
+  min-height: 450px;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle, #0077ea, #1f4f96, #1b2949, #000);
+}
+
+.stage {
+  height: 300px;
+  width: 500px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  perspective: 9999px;
+  transform-style: preserve-3d;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: ಠ_ಠ 5s infinite alternate ease-in-out -7.5s;
+  animation-fill-mode: forwards;
+  transform: rotateY(40deg) rotateX(33deg) translateZ(0);
+}
+
+.layer:after {
+  font: 150px/0.65 "Pacifico", "Kaushan Script", Futura, "Roboto", "Trebuchet MS", Helvetica, sans-serif;
+  content: "Educational\a    Color!";
+  white-space: pre;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin-left:auto;
+  margin-right:auto;
+  position: absolute;
+  top: 50px;
+  color: whitesmoke;
+  letter-spacing: -2px;
+  text-shadow: 4px 0 10px rgba(0, 0, 0, 0.13);
+}
+
+.layer:nth-child(1):after {
+  transform: translateZ(0px);
+}
+
+.layer:nth-child(2):after {
+  transform: translateZ(-1.5px);
+}
+
+.layer:nth-child(3):after {
+  transform: translateZ(-3px);
+}
+
+.layer:nth-child(4):after {
+  transform: translateZ(-4.5px);
+}
+
+.layer:nth-child(5):after {
+  transform: translateZ(-6px);
+}
+
+.layer:nth-child(6):after {
+  transform: translateZ(-7.5px);
+}
+
+.layer:nth-child(7):after {
+  transform: translateZ(-9px);
+}
+
+.layer:nth-child(8):after {
+  transform: translateZ(-10.5px);
+}
+
+.layer:nth-child(9):after {
+  transform: translateZ(-12px);
+}
+
+.layer:nth-child(10):after {
+  transform: translateZ(-13.5px);
+}
+
+.layer:nth-child(11):after {
+  transform: translateZ(-15px);
+}
+
+.layer:nth-child(12):after {
+  transform: translateZ(-16.5px);
+}
+
+.layer:nth-child(13):after {
+  transform: translateZ(-18px);
+}
+
+.layer:nth-child(14):after {
+  transform: translateZ(-19.5px);
+}
+
+.layer:nth-child(15):after {
+  transform: translateZ(-21px);
+}
+
+.layer:nth-child(16):after {
+  transform: translateZ(-22.5px);
+}
+
+.layer:nth-child(17):after {
+  transform: translateZ(-24px);
+}
+
+.layer:nth-child(18):after {
+  transform: translateZ(-25.5px);
+}
+
+.layer:nth-child(19):after {
+  transform: translateZ(-27px);
+}
+
+.layer:nth-child(20):after {
+  transform: translateZ(-28.5px);
+}
+
+.layer:nth-child(n+10):after {
+  -webkit-text-stroke: 3px rgba(0, 0, 0, 0.25);
+}
+
+.layer:nth-child(n+11):after {
+  -webkit-text-stroke: 15px dodgerblue;
+  text-shadow: 6px 0 6px #00366b, 5px 5px 5px #002951, 0 6px 6px #00366b;
+}
+
+.layer:nth-child(n+12):after {
+  -webkit-text-stroke: 15px #0077ea;
+}
+
+.layer:last-child:after {
+  -webkit-text-stroke: 17px rgba(0, 0, 0, 0.1);
+}
+
+.layer:first-child:after {
+  color: #fff;
+  text-shadow: none;
+}
+
+@keyframes ಠ_ಠ {
+  100% {
+    transform: rotateY(-40deg) rotateX(-43deg);
+  }
+}
+
+
+
+Resources
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.sec0 {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+section {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image1 {
+  width: 348px;
+  height: 348px;
+}
+.flip-box1 {
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box1:hover .flip-box-inner1 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front1,
+.flip-box-back1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front1 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back1 {
+  background-color: blue;
+  color: white;
+  transform: rotateY(180deg);
+}
+.largetextinimage1 {
+  font-size: 50px;
+  font-family: Garamond;
+}
+.textinimage1 {
+  font-size: 25px;
+  font-family: Garamond;
+}
+.image2 {
+  width: 346px;
+  height: 229px;
+}
+.largetextinimage2 {
+  font-size: 50px;
+  font-family: Garamond;
+}
+.textinimage2 {
+  font-size: 25px;
+  font-family: Garamond;
+}
+.flip-box2 {
+  background-color: transparent;
+  width: 348px;
+  height: 231px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box2:hover .flip-box-inner2 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front2,
+.flip-box-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front2 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back2 {
+  background-color: purple;
+  color: white;
+  transform: rotateY(180deg);
+}
+.image3 {
+  width: 346px;
+  height: 229px;
+}
+.largetextinimage3 {
+  font-size: 50px;
+  font-family: Garamond;
+}
+.textinimage3 {
+  font-size: 25px;
+  font-family: Garamond;
+}
+.flip-box3 {
+  background-color: transparent;
+  width: 348px;
+  height: 231px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box3:hover .flip-box-inner3 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front3,
+.flip-box-back3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front3 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back3 {
+  background-color: brown;
+  color: white;
+  transform: rotateY(180deg);
+}
+.image4 {
+  width: 348px;
+  height: 348px;
+}
+.flip-box4 {
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box4:hover .flip-box-inner4 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front4,
+.flip-box-back4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front4 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back4 {
+  background-color: red;
+  color: white;
+  transform: rotateY(180deg);
+}
+.largetextinimage4 {
+  font-size: 50px;
+  font-family: Garamond;
+}
+.textinimage4 {
+  font-size: 25px;
+  font-family: Garamond;
+}
+.image5 {
+  width: 348px;
+  height: 400px;
+}
+.flip-box5 {
+  background-color: transparent;
+  width: 350px;
+  height: 402px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner5 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box5:hover .flip-box-inner5 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front5,
+.flip-box-back5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front5 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back5 {
+  background-color: orange;
+  color: white;
+  transform: rotateY(180deg);
+}
+.largetextinimage5 {
+  font-size: 50px;
+  font-family: Garamond;
+}
+.textinimage5 {
+  font-size: 25px;
+  font-family: Garamond;
+}
+.image6 {
+  width: 348px;
+  height: 400px;
+}
+.flip-box6 {
+  background-color: transparent;
+  width: 350px;
+  height: 402px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box6:hover .flip-box-inner6 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front6,
+.flip-box-back6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front6 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back6 {
+  background-color: Yellow;
+  color: black;
+  transform: rotateY(180deg);
+}
+.largetextinimage6 {
+  font-size: 50px;
+  font-family: Garamond;
+}
+.textinimage6 {
+  font-size: 25px;
+  font-family: Garamond;
+}
+.image7 {
+  width: 348px;
+  height: 400px;
+}
+.flip-box7 {
+  background-color: transparent;
+  width: 350px;
+  height: 402px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner7 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box7:hover .flip-box-inner7 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front7,
+.flip-box-back7 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front7 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back7 {
+  background-color: Green;
+  color: White;
+  transform: rotateY(180deg);
+}
+.largetextinimage7 {
+  font-size: 50px;
+  font-family: Garamond;
+}
+.textinimage7 {
+  font-size: 25px;
+  font-family: Garamond;
+}
+.image8 {
+  width: 348px;
+  height: 348px;
+}
+.flip-box8 {
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  border: 1px solid black;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner8 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box8:hover .flip-box-inner8 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front8,
+.flip-box-back8 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front8 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back8 {
+  background-color: White;
+  color: Black;
+  transform: rotateY(180deg);
+}
+.largetextinimage8 {
+  font-size: 50px;
+  font-family: Garamond;
+}
+.textinimage8 {
+  font-size: 25px;
+  font-family: Garamond;
+}
+.image9 {
+  width: 348px;
+  height: 348px;
+}
+.flip-box9 {
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  border: 1px solid black;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner9 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box9:hover .flip-box-inner9 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front9,
+.flip-box-back9 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front9 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back9 {
+  background-color: silver;
+  color: white;
+  transform: rotateY(180deg);
+}
+.largetextinimage9 {
+  font-size: 50px;
+  font-family: Garamond;
+}
+.textinimage9 {
+  font-size: 25px;
+  font-family: Garamond;
+}
+.image10 {
+  width: 348px;
+  height: 348px;
+}
+.flip-box10 {
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  border: 1px solid black;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner10 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box10:hover .flip-box-inner10 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front10,
+.flip-box-back10 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front10 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back10 {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+.largetextinimage10 {
+  font-size: 50px;
+  font-family: Garamond;
+}
+.textinimage10 {
+  font-size: 25px;
+  font-family: Garamond;
+}
+.sec1 {
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.04) 0px,
+      rgba(0, 0, 0, 0.04) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(135deg, rgb(65, 166, 189), rgb(84, 4, 168));
+}
+.sec2 {
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(45deg, rgb(228, 105, 225), rgb(16, 69, 109));
+}
+.sec3 {
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.03),
+      rgba(0, 0, 0, 0.03),
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.09),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.03),
+      transparent,
+      rgba(0, 0, 0, 0.07),
+      rgba(0, 0, 0, 0.03),
+      rgba(0, 0, 0, 0.01) 4px
+    ),
+    linear-gradient(135deg, rgb(239, 145, 97), rgb(153, 53, 18));
+}
+.sec4 {
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(90deg, rgb(154, 32, 25), rgb(227, 175, 26));
+}
+.sec5 {
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.04) 0px,
+      rgba(0, 0, 0, 0.04) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(45deg, rgb(223, 43, 1), rgb(202, 124, 12));
+}
+.sec6 {
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.04) 0px,
+      rgba(0, 0, 0, 0.04) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(135deg, rgb(252, 247, 9), rgb(229, 130, 102));
+}
+.sec7 {
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.06),
+      rgba(0, 0, 0, 0.05),
+      transparent,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.06),
+      rgba(0, 0, 0, 0.02),
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.04),
+      rgba(0, 0, 0, 0.02),
+      rgba(0, 0, 0, 0.07) 3px
+    ),
+    linear-gradient(90deg, rgb(63, 122, 63), rgb(218, 204, 62));
+}
+.sec8 {
+  background-image: linear-gradient(
+      175deg,
+      rgba(154, 154, 154, 0.03) 0%,
+      rgba(154, 154, 154, 0.03) 44%,
+      transparent 44%,
+      transparent 100%
+    ),
+    linear-gradient(
+      160deg,
+      rgba(48, 48, 48, 0.02) 0%,
+      rgba(48, 48, 48, 0.02) 37%,
+      transparent 37%,
+      transparent 100%
+    ),
+    linear-gradient(
+      246deg,
+      rgba(149, 149, 149, 0.01) 0%,
+      rgba(149, 149, 149, 0.01) 29%,
+      transparent 29%,
+      transparent 100%
+    ),
+    linear-gradient(
+      234deg,
+      rgba(0, 0, 0, 0.01) 0%,
+      rgba(0, 0, 0, 0.01) 2%,
+      transparent 2%,
+      transparent 100%
+    ),
+    linear-gradient(
+      219deg,
+      rgba(92, 92, 92, 0.01) 0%,
+      rgba(92, 92, 92, 0.01) 85%,
+      transparent 85%,
+      transparent 100%
+    ),
+    linear-gradient(
+      186deg,
+      rgba(44, 44, 44, 0.02) 0%,
+      rgba(44, 44, 44, 0.02) 29%,
+      transparent 29%,
+      transparent 100%
+    ),
+    linear-gradient(
+      134deg,
+      rgba(27, 27, 27, 0.03) 0%,
+      rgba(27, 27, 27, 0.03) 38%,
+      transparent 38%,
+      transparent 100%
+    ),
+    linear-gradient(
+      343deg,
+      rgba(224, 224, 224, 0.01) 0%,
+      rgba(224, 224, 224, 0.01) 51%,
+      transparent 51%,
+      transparent 100%
+    ),
+    linear-gradient(
+      107deg,
+      rgba(198, 198, 198, 0.02) 0%,
+      rgba(198, 198, 198, 0.02) 60%,
+      transparent 60%,
+      transparent 100%
+    ),
+    linear-gradient(
+      289deg,
+      rgba(240, 240, 240, 0.02) 0%,
+      rgba(240, 240, 240, 0.02) 30%,
+      transparent 30%,
+      transparent 100%
+    ),
+    linear-gradient(
+      100deg,
+      rgba(1, 1, 1, 0.01) 0%,
+      rgba(1, 1, 1, 0.01) 9%,
+      transparent 9%,
+      transparent 100%
+    ),
+    linear-gradient(
+      348deg,
+      rgba(153, 153, 153, 0.01) 0%,
+      rgba(153, 153, 153, 0.01) 30%,
+      transparent 30%,
+      transparent 100%
+    ),
+    linear-gradient(
+      207deg,
+      rgba(213, 213, 213, 0.03) 0%,
+      rgba(213, 213, 213, 0.03) 33%,
+      transparent 33%,
+      transparent 100%
+    ),
+    linear-gradient(
+      43deg,
+      rgba(123, 123, 123, 0.02) 0%,
+      rgba(123, 123, 123, 0.02) 59%,
+      transparent 59%,
+      transparent 100%
+    ),
+    linear-gradient(
+      103deg,
+      rgba(229, 229, 229, 0.01) 0%,
+      rgba(229, 229, 229, 0.01) 44%,
+      transparent 44%,
+      transparent 100%
+    ),
+    linear-gradient(
+      288deg,
+      rgba(25, 25, 25, 0.01) 0%,
+      rgba(25, 25, 25, 0.01) 57%,
+      transparent 57%,
+      transparent 100%
+    ),
+    linear-gradient(
+      233deg,
+      rgba(132, 132, 132, 0.01) 0%,
+      rgba(132, 132, 132, 0.01) 46%,
+      transparent 46%,
+      transparent 100%
+    ),
+    linear-gradient(
+      306deg,
+      rgba(198, 198, 198, 0.01) 0%,
+      rgba(198, 198, 198, 0.01) 79%,
+      transparent 79%,
+      transparent 100%
+    ),
+    linear-gradient(
+      258deg,
+      rgba(111, 111, 111, 0.01) 0%,
+      rgba(111, 111, 111, 0.01) 34%,
+      transparent 34%,
+      transparent 100%
+    ),
+    linear-gradient(
+      266deg,
+      rgba(147, 147, 147, 0.03) 0%,
+      rgba(147, 147, 147, 0.03) 42%,
+      transparent 42%,
+      transparent 100%
+    ),
+    linear-gradient(
+      233deg,
+      rgba(243, 243, 243, 0.01) 0%,
+      rgba(243, 243, 243, 0.01) 74%,
+      transparent 74%,
+      transparent 100%
+    ),
+    linear-gradient(
+      137deg,
+      rgba(34, 34, 34, 0.02) 0%,
+      rgba(34, 34, 34, 0.02) 2%,
+      transparent 2%,
+      transparent 100%
+    ),
+    linear-gradient(
+      118deg,
+      rgba(90, 90, 90, 0.02) 0%,
+      rgba(90, 90, 90, 0.02) 32%,
+      transparent 32%,
+      transparent 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(164, 164, 164, 0.02) 0%,
+      rgba(164, 164, 164, 0.02) 64%,
+      transparent 64%,
+      transparent 100%
+    ),
+    linear-gradient(
+      278deg,
+      rgba(3, 3, 3, 0.01) 0%,
+      rgba(3, 3, 3, 0.01) 65%,
+      transparent 65%,
+      transparent 100%
+    ),
+    linear-gradient(
+      13deg,
+      rgba(244, 244, 244, 0.02) 0%,
+      rgba(244, 244, 244, 0.02) 38%,
+      transparent 38%,
+      transparent 100%
+    ),
+    linear-gradient(
+      156deg,
+      rgba(215, 215, 215, 0.01) 0%,
+      rgba(215, 215, 215, 0.01) 10%,
+      transparent 10%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+}
+.sec9 {
+  background-image: linear-gradient(
+      35deg,
+      rgba(253, 253, 253, 0.03) 0%,
+      rgba(253, 253, 253, 0.03) 53%,
+      rgba(109, 109, 109, 0.03) 53%,
+      rgba(109, 109, 109, 0.03) 59%,
+      rgba(228, 228, 228, 0.03) 59%,
+      rgba(228, 228, 228, 0.03) 66%,
+      rgba(42, 42, 42, 0.03) 66%,
+      rgba(42, 42, 42, 0.03) 95%,
+      rgba(165, 165, 165, 0.03) 95%,
+      rgba(165, 165, 165, 0.03) 100%
+    ),
+    linear-gradient(
+      205deg,
+      rgba(62, 62, 62, 0.03) 0%,
+      rgba(62, 62, 62, 0.03) 31%,
+      rgba(200, 200, 200, 0.03) 31%,
+      rgba(200, 200, 200, 0.03) 41%,
+      rgba(30, 30, 30, 0.03) 41%,
+      rgba(30, 30, 30, 0.03) 47%,
+      rgba(151, 151, 151, 0.03) 47%,
+      rgba(151, 151, 151, 0.03) 60%,
+      rgba(95, 95, 95, 0.03) 60%,
+      rgba(95, 95, 95, 0.03) 100%
+    ),
+    linear-gradient(
+      30deg,
+      rgba(7, 7, 7, 0.03) 0%,
+      rgba(7, 7, 7, 0.03) 19%,
+      rgba(63, 63, 63, 0.03) 19%,
+      rgba(63, 63, 63, 0.03) 33%,
+      rgba(175, 175, 175, 0.03) 33%,
+      rgba(175, 175, 175, 0.03) 37%,
+      rgba(244, 244, 244, 0.03) 37%,
+      rgba(244, 244, 244, 0.03) 60%,
+      rgba(177, 177, 177, 0.03) 60%,
+      rgba(177, 177, 177, 0.03) 100%
+    ),
+    linear-gradient(90deg, rgb(162, 162, 162), rgb(229, 229, 229));
+}
+.sec10 {
+  background-image: repeating-linear-gradient(
+      45deg,
+      rgba(33, 33, 33, 0.06) 0px,
+      rgba(33, 33, 33, 0.06) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(45deg, rgb(33, 33, 33), transparent),
+    linear-gradient(90deg, rgb(33, 33, 33), transparent),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+}
+
+.scroll-down {
+  height: 50px;
+  width: 30px;
+  border: 2px solid black;
+  position: absolute;
+
+  left: 50%;
+  top: 400px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid black;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.3s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Montserrat Medium";
+  max-width: 40ch;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(11) {
+  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(12) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(13) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(14) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(15) {
+  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(16) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(17) {
+  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(18) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
